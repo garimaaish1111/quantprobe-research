@@ -1,0 +1,13 @@
+# GPU-only dependencies. Install these ON TOP of requirements.txt, and only
+# on a machine with a CUDA GPU (Colab, Kaggle, any NVIDIA box).
+#
+#     pip install -r requirements-cuda.txt
+#
+# On Colab, do NOT install requirements.txt as well - it pins a CPU build of
+# torch and would replace Colab's CUDA build. There, install only:
+#
+#     pip install -q -U transformers==5.16.1 datasets==5.0.1 #                       accelerate==1.14.0 bitsandbytes==0.50.2
+#
+# bitsandbytes provides LLM.int8() and NF4. Without it the FP16 arm still
+# runs; the INT8 and INT4 arms raise a clear ModelLoadError.
+bitsandbytes==0.50.2

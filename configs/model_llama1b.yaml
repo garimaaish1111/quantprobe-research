@@ -1,0 +1,21 @@
+# Llama-3.2-1B-Instruct - the v1 model.
+#
+# Chosen for its size: 17 hidden states, d=2048, ~0.8 GB of cached
+# activations per precision at N=6000.
+#
+# GATED. Requires (a) an HF token in $HF_TOKEN and (b) accepting the Llama
+# 3.2 community licence at huggingface.co/meta-llama/Llama-3.2-1B-Instruct.
+# Extraction will fail with a clear message if either is missing.
+
+extends: base.yaml
+
+model:
+  hf_id: meta-llama/Llama-3.2-1B-Instruct
+  short_name: llama32-1b
+  gated: true
+  trust_remote_code: false
+  # Asserted after load. If HF ships a different revision with a different
+  # depth, we want a loud failure, not a silently different x-axis.
+  expected_n_layers: 16          # transformer blocks
+  expected_hidden_states: 17     # blocks + embedding output
+  expected_d_model: 2048

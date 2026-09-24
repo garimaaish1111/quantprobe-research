@@ -1,0 +1,788 @@
+{
+  "figure": "/content/QuantProbe/results/figures/abstention_qwen25-1.5b.png",
+  "git_commit": "unavailable: not a git repo or no commits yet",
+  "git_dirty": "unavailable",
+  "hardware": {
+    "cpu": "x86_64",
+    "cuda_available": true,
+    "cuda_version": "12.8",
+    "gpu_name": "Tesla T4",
+    "gpu_total_memory_gb": 14.56
+  },
+  "layer": 17,
+  "model_short_name": "qwen25-1.5b",
+  "phase": "5b-abstention",
+  "results": {
+    "fp16": {
+      "auc_coverage_risk": 0.2923437649631448,
+      "baseline_false_rate": 0.49594974375929907,
+      "curve": [
+        {
+          "abstention_rate": 0.0,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 1.0,
+          "false_assertion_rate": 0.49594974375929907,
+          "n_asserted": 6049,
+          "quantile": 0.0,
+          "risk_reduction": 0.0,
+          "threshold": -74.26324462890625
+        },
+        {
+          "abstention_rate": 0.04761117540089266,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.9523888245991073,
+          "false_assertion_rate": 0.48307585488630445,
+          "n_asserted": 5761,
+          "quantile": 0.0475,
+          "risk_reduction": 0.025958051264248154,
+          "threshold": -25.604652175903315
+        },
+        {
+          "abstention_rate": 0.09505703422053235,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.9049429657794676,
+          "false_assertion_rate": 0.46255023748629887,
+          "n_asserted": 5474,
+          "quantile": 0.095,
+          "risk_reduction": 0.06734453781512607,
+          "threshold": -19.606863861083983
+        },
+        {
+          "abstention_rate": 0.14250289304017194,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.8574971069598281,
+          "false_assertion_rate": 0.43647580489685756,
+          "n_asserted": 5187,
+          "quantile": 0.14250000000000002,
+          "risk_reduction": 0.11991928539296956,
+          "threshold": -15.926521911621093
+        },
+        {
+          "abstention_rate": 0.1901140684410646,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.8098859315589354,
+          "false_assertion_rate": 0.4104919371300265,
+          "n_asserted": 4899,
+          "quantile": 0.19,
+          "risk_reduction": 0.17231142410015654,
+          "threshold": -13.13415153503418
+        },
+        {
+          "abstention_rate": 0.2375599272607043,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.7624400727392957,
+          "false_assertion_rate": 0.38508239375542064,
+          "n_asserted": 4612,
+          "quantile": 0.2375,
+          "risk_reduction": 0.22354553339115354,
+          "threshold": -10.817663574218752
+        },
+        {
+          "abstention_rate": 0.2850057860803439,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.7149942139196561,
+          "false_assertion_rate": 0.3597687861271676,
+          "n_asserted": 4325,
+          "quantile": 0.28500000000000003,
+          "risk_reduction": 0.27458620423892105,
+          "threshold": -8.650150108337401
+        },
+        {
+          "abstention_rate": 0.33245164489998347,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.6675483551000165,
+          "false_assertion_rate": 0.337295690936107,
+          "n_asserted": 4038,
+          "quantile": 0.3325,
+          "risk_reduction": 0.3198994551758296,
+          "threshold": -6.460916442871094
+        },
+        {
+          "abstention_rate": 0.3800628203008761,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.6199371796991239,
+          "false_assertion_rate": 0.3154666666666667,
+          "n_asserted": 3750,
+          "quantile": 0.38,
+          "risk_reduction": 0.3639140444444444,
+          "threshold": -4.452402915954588
+        },
+        {
+          "abstention_rate": 0.4275086791205158,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.5724913208794842,
+          "false_assertion_rate": 0.29858504187120993,
+          "n_asserted": 3463,
+          "quantile": 0.4275,
+          "risk_reduction": 0.39795302724035037,
+          "threshold": -2.4566523838043213
+        },
+        {
+          "abstention_rate": 0.4749545379401554,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.5250454620598446,
+          "false_assertion_rate": 0.2824307304785894,
+          "n_asserted": 3176,
+          "quantile": 0.475,
+          "risk_reduction": 0.4305255037783376,
+          "threshold": -0.6640886306762711
+        },
+        {
+          "abstention_rate": 0.5225657133410482,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.4774342866589519,
+          "false_assertion_rate": 0.2659279778393352,
+          "n_asserted": 2888,
+          "quantile": 0.5225,
+          "risk_reduction": 0.46380055401662046,
+          "threshold": 1.1864479494094846
+        },
+        {
+          "abstention_rate": 0.5700115721606878,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.4299884278393123,
+          "false_assertion_rate": 0.2502883506343714,
+          "n_asserted": 2601,
+          "quantile": 0.5700000000000001,
+          "risk_reduction": 0.49533525567089587,
+          "threshold": 3.2077442932128912
+        },
+        {
+          "abstention_rate": 0.6174574309803273,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.38254256901967265,
+          "false_assertion_rate": 0.23249783923941228,
+          "n_asserted": 2314,
+          "quantile": 0.6175,
+          "risk_reduction": 0.5312068568135984,
+          "threshold": 5.012223205566409
+        },
+        {
+          "abstention_rate": 0.6649032897999669,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.33509671020003307,
+          "false_assertion_rate": 0.22101628021706957,
+          "n_asserted": 2027,
+          "quantile": 0.665,
+          "risk_reduction": 0.554357506988982,
+          "threshold": 7.006071281433106
+        },
+        {
+          "abstention_rate": 0.7125144652008597,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.28748553479914035,
+          "false_assertion_rate": 0.20644048303622772,
+          "n_asserted": 1739,
+          "quantile": 0.7125,
+          "risk_reduction": 0.5837471727046195,
+          "threshold": 9.36260356903076
+        },
+        {
+          "abstention_rate": 0.7599603240204993,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.24003967597950074,
+          "false_assertion_rate": 0.19146005509641872,
+          "n_asserted": 1452,
+          "quantile": 0.76,
+          "risk_reduction": 0.6139527089072544,
+          "threshold": 11.755308456420902
+        },
+        {
+          "abstention_rate": 0.8074061828401389,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.19259381715986112,
+          "false_assertion_rate": 0.1648068669527897,
+          "n_asserted": 1165,
+          "quantile": 0.8075,
+          "risk_reduction": 0.6676944206008583,
+          "threshold": 14.85131084442139
+        },
+        {
+          "abstention_rate": 0.8550173582410316,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.1449826417589684,
+          "false_assertion_rate": 0.1516533637400228,
+          "n_asserted": 877,
+          "quantile": 0.855,
+          "risk_reduction": 0.6942162675788673,
+          "threshold": 17.738251190185547
+        },
+        {
+          "abstention_rate": 0.9024632170606712,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.09753678293932881,
+          "false_assertion_rate": 0.10847457627118644,
+          "n_asserted": 590,
+          "quantile": 0.9025,
+          "risk_reduction": 0.7812790960451977,
+          "threshold": 21.613882369995114
+        },
+        {
+          "abstention_rate": 0.9499090758803108,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.050090924119689205,
+          "false_assertion_rate": 0.06930693069306931,
+          "n_asserted": 303,
+          "quantile": 0.95,
+          "risk_reduction": 0.8602541254125412,
+          "threshold": 26.77878684997558
+        }
+      ],
+      "n": 6049,
+      "operating_points": {
+        "coverage_50": {
+          "abstention_rate": 0.5225657133410482,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.4774342866589519,
+          "false_assertion_rate": 0.2659279778393352,
+          "n_asserted": 2888,
+          "quantile": 0.5225,
+          "risk_reduction": 0.46380055401662046,
+          "threshold": 1.1864479494094846
+        },
+        "coverage_70": {
+          "abstention_rate": 0.2850057860803439,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.7149942139196561,
+          "false_assertion_rate": 0.3597687861271676,
+          "n_asserted": 4325,
+          "quantile": 0.28500000000000003,
+          "risk_reduction": 0.27458620423892105,
+          "threshold": -8.650150108337401
+        },
+        "coverage_90": {
+          "abstention_rate": 0.09505703422053235,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.9049429657794676,
+          "false_assertion_rate": 0.46255023748629887,
+          "n_asserted": 5474,
+          "quantile": 0.095,
+          "risk_reduction": 0.06734453781512607,
+          "threshold": -19.606863861083983
+        }
+      }
+    },
+    "int4": {
+      "auc_coverage_risk": 0.3110334712503018,
+      "baseline_false_rate": 0.49594974375929907,
+      "curve": [
+        {
+          "abstention_rate": 0.0,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 1.0,
+          "false_assertion_rate": 0.49594974375929907,
+          "n_asserted": 6049,
+          "quantile": 0.0,
+          "risk_reduction": 0.0,
+          "threshold": -49.908729553222656
+        },
+        {
+          "abstention_rate": 0.04761117540089266,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.9523888245991073,
+          "false_assertion_rate": 0.4867210553723312,
+          "n_asserted": 5761,
+          "quantile": 0.0475,
+          "risk_reduction": 0.018608112017589582,
+          "threshold": -25.921796417236326
+        },
+        {
+          "abstention_rate": 0.09505703422053235,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.9049429657794676,
+          "false_assertion_rate": 0.464011691633175,
+          "n_asserted": 5474,
+          "quantile": 0.095,
+          "risk_reduction": 0.06439775910364146,
+          "threshold": -18.937961349487303
+        },
+        {
+          "abstention_rate": 0.14250289304017194,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.8574971069598281,
+          "false_assertion_rate": 0.44225949489107386,
+          "n_asserted": 5187,
+          "quantile": 0.14250000000000002,
+          "risk_reduction": 0.10825743846796476,
+          "threshold": -15.395905532836911
+        },
+        {
+          "abstention_rate": 0.1901140684410646,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.8098859315589354,
+          "false_assertion_rate": 0.42028985507246375,
+          "n_asserted": 4899,
+          "quantile": 0.19,
+          "risk_reduction": 0.1525555555555556,
+          "threshold": -12.414006423950195
+        },
+        {
+          "abstention_rate": 0.2375599272607043,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.7624400727392957,
+          "false_assertion_rate": 0.3974414570685169,
+          "n_asserted": 4612,
+          "quantile": 0.2375,
+          "risk_reduction": 0.19862554206418043,
+          "threshold": -10.283657455444336
+        },
+        {
+          "abstention_rate": 0.2850057860803439,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.7149942139196561,
+          "false_assertion_rate": 0.375028901734104,
+          "n_asserted": 4325,
+          "quantile": 0.28500000000000003,
+          "risk_reduction": 0.24381672447013494,
+          "threshold": -8.496013031005859
+        },
+        {
+          "abstention_rate": 0.33245164489998347,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.6675483551000165,
+          "false_assertion_rate": 0.34992570579494797,
+          "n_asserted": 4038,
+          "quantile": 0.3325,
+          "risk_reduction": 0.2944331352154533,
+          "threshold": -6.506107444763184
+        },
+        {
+          "abstention_rate": 0.3800628203008761,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.6199371796991239,
+          "false_assertion_rate": 0.32293333333333335,
+          "n_asserted": 3750,
+          "quantile": 0.38,
+          "risk_reduction": 0.3488587555555555,
+          "threshold": -4.4417007446289025
+        },
+        {
+          "abstention_rate": 0.4275086791205158,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.5724913208794842,
+          "false_assertion_rate": 0.29771874097603235,
+          "n_asserted": 3463,
+          "quantile": 0.4275,
+          "risk_reduction": 0.39969977861199346,
+          "threshold": -2.565924873352051
+        },
+        {
+          "abstention_rate": 0.4749545379401554,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.5250454620598446,
+          "false_assertion_rate": 0.27141057934508817,
+          "n_asserted": 3176,
+          "quantile": 0.475,
+          "risk_reduction": 0.4527458018471872,
+          "threshold": -0.5675175666809085
+        },
+        {
+          "abstention_rate": 0.5225657133410482,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.4774342866589519,
+          "false_assertion_rate": 0.2531163434903047,
+          "n_asserted": 2888,
+          "quantile": 0.5225,
+          "risk_reduction": 0.48963307940904893,
+          "threshold": 1.5647073650360106
+        },
+        {
+          "abstention_rate": 0.5700115721606878,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.4299884278393123,
+          "false_assertion_rate": 0.23490965013456364,
+          "n_asserted": 2601,
+          "quantile": 0.5700000000000001,
+          "risk_reduction": 0.5263438421120082,
+          "threshold": 3.404846649169929
+        },
+        {
+          "abstention_rate": 0.6174574309803273,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.38254256901967265,
+          "false_assertion_rate": 0.23076923076923078,
+          "n_asserted": 2314,
+          "quantile": 0.6175,
+          "risk_reduction": 0.5346923076923077,
+          "threshold": 5.362484035491944
+        },
+        {
+          "abstention_rate": 0.6649032897999669,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.33509671020003307,
+          "false_assertion_rate": 0.222496299950666,
+          "n_asserted": 2027,
+          "quantile": 0.665,
+          "risk_reduction": 0.5513732938661404,
+          "threshold": 7.20082462310791
+        },
+        {
+          "abstention_rate": 0.7125144652008597,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.28748553479914035,
+          "false_assertion_rate": 0.21679125934445084,
+          "n_asserted": 1739,
+          "quantile": 0.7125,
+          "risk_reduction": 0.5628765574084723,
+          "threshold": 8.945504570007325
+        },
+        {
+          "abstention_rate": 0.7599603240204993,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.24003967597950074,
+          "false_assertion_rate": 0.21212121212121213,
+          "n_asserted": 1452,
+          "quantile": 0.76,
+          "risk_reduction": 0.5722929292929293,
+          "threshold": 10.936335029602052
+        },
+        {
+          "abstention_rate": 0.8074061828401389,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.19259381715986112,
+          "false_assertion_rate": 0.2128755364806867,
+          "n_asserted": 1165,
+          "quantile": 0.8075,
+          "risk_reduction": 0.5707719599427754,
+          "threshold": 13.313037567138677
+        },
+        {
+          "abstention_rate": 0.8550173582410316,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.1449826417589684,
+          "false_assertion_rate": 0.21892816419612315,
+          "n_asserted": 877,
+          "quantile": 0.855,
+          "risk_reduction": 0.5585678449258837,
+          "threshold": 16.16527992248535
+        },
+        {
+          "abstention_rate": 0.9024632170606712,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.09753678293932881,
+          "false_assertion_rate": 0.2271186440677966,
+          "n_asserted": 590,
+          "quantile": 0.9025,
+          "risk_reduction": 0.5420531073446327,
+          "threshold": 20.16831321716308
+        },
+        {
+          "abstention_rate": 0.9499090758803108,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.050090924119689205,
+          "false_assertion_rate": 0.23102310231023102,
+          "n_asserted": 303,
+          "quantile": 0.95,
+          "risk_reduction": 0.5341804180418043,
+          "threshold": 29.754472351074206
+        }
+      ],
+      "n": 6049,
+      "operating_points": {
+        "coverage_50": {
+          "abstention_rate": 0.5225657133410482,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.4774342866589519,
+          "false_assertion_rate": 0.2531163434903047,
+          "n_asserted": 2888,
+          "quantile": 0.5225,
+          "risk_reduction": 0.48963307940904893,
+          "threshold": 1.5647073650360106
+        },
+        "coverage_70": {
+          "abstention_rate": 0.2850057860803439,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.7149942139196561,
+          "false_assertion_rate": 0.375028901734104,
+          "n_asserted": 4325,
+          "quantile": 0.28500000000000003,
+          "risk_reduction": 0.24381672447013494,
+          "threshold": -8.496013031005859
+        },
+        "coverage_90": {
+          "abstention_rate": 0.09505703422053235,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.9049429657794676,
+          "false_assertion_rate": 0.464011691633175,
+          "n_asserted": 5474,
+          "quantile": 0.095,
+          "risk_reduction": 0.06439775910364146,
+          "threshold": -18.937961349487303
+        }
+      }
+    },
+    "int8": {
+      "auc_coverage_risk": 0.2754917559604421,
+      "baseline_false_rate": 0.49594974375929907,
+      "curve": [
+        {
+          "abstention_rate": 0.0,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 1.0,
+          "false_assertion_rate": 0.49594974375929907,
+          "n_asserted": 6049,
+          "quantile": 0.0,
+          "risk_reduction": 0.0,
+          "threshold": -91.90287017822266
+        },
+        {
+          "abstention_rate": 0.04761117540089266,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.9523888245991073,
+          "false_assertion_rate": 0.47717410171845165,
+          "n_asserted": 5761,
+          "quantile": 0.0475,
+          "risk_reduction": 0.037857952901695344,
+          "threshold": -29.162711715698244
+        },
+        {
+          "abstention_rate": 0.09505703422053235,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.9049429657794676,
+          "false_assertion_rate": 0.46236755571793936,
+          "n_asserted": 5474,
+          "quantile": 0.095,
+          "risk_reduction": 0.06771288515406163,
+          "threshold": -21.849419326782225
+        },
+        {
+          "abstention_rate": 0.14250289304017194,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.8574971069598281,
+          "false_assertion_rate": 0.43898207056101796,
+          "n_asserted": 5187,
+          "quantile": 0.14250000000000002,
+          "risk_reduction": 0.11486581839213414,
+          "threshold": -16.618115158081054
+        },
+        {
+          "abstention_rate": 0.1901140684410646,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.8098859315589354,
+          "false_assertion_rate": 0.41192080016329863,
+          "n_asserted": 4899,
+          "quantile": 0.19,
+          "risk_reduction": 0.16943035993740221,
+          "threshold": -12.539576873779296
+        },
+        {
+          "abstention_rate": 0.2375599272607043,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.7624400727392957,
+          "false_assertion_rate": 0.3855160450997398,
+          "n_asserted": 4612,
+          "quantile": 0.2375,
+          "risk_reduction": 0.222671147730558,
+          "threshold": -9.258646774291993
+        },
+        {
+          "abstention_rate": 0.2850057860803439,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.7149942139196561,
+          "false_assertion_rate": 0.3574566473988439,
+          "n_asserted": 4325,
+          "quantile": 0.28500000000000003,
+          "risk_reduction": 0.2792482466281311,
+          "threshold": -6.535090293884276
+        },
+        {
+          "abstention_rate": 0.33245164489998347,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.6675483551000165,
+          "false_assertion_rate": 0.328875681030213,
+          "n_asserted": 4038,
+          "quantile": 0.3325,
+          "risk_reduction": 0.3368770018160806,
+          "threshold": -4.109705924987793
+        },
+        {
+          "abstention_rate": 0.3800628203008761,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.6199371796991239,
+          "false_assertion_rate": 0.30346666666666666,
+          "n_asserted": 3750,
+          "quantile": 0.38,
+          "risk_reduction": 0.38811004444444447,
+          "threshold": -1.9663276481628418
+        },
+        {
+          "abstention_rate": 0.4275086791205158,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.5724913208794842,
+          "false_assertion_rate": 0.2795264221773029,
+          "n_asserted": 3463,
+          "quantile": 0.4275,
+          "risk_reduction": 0.43638155741649826,
+          "threshold": 0.13816165447235104
+        },
+        {
+          "abstention_rate": 0.4749545379401554,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.5250454620598446,
+          "false_assertion_rate": 0.2616498740554156,
+          "n_asserted": 3176,
+          "quantile": 0.475,
+          "risk_reduction": 0.472426637279597,
+          "threshold": 2.166490316390986
+        },
+        {
+          "abstention_rate": 0.5225657133410482,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.4774342866589519,
+          "false_assertion_rate": 0.24376731301939059,
+          "n_asserted": 2888,
+          "quantile": 0.5225,
+          "risk_reduction": 0.5084838411819022,
+          "threshold": 3.983567361831665
+        },
+        {
+          "abstention_rate": 0.5700115721606878,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.4299884278393123,
+          "false_assertion_rate": 0.223760092272203,
+          "n_asserted": 2601,
+          "quantile": 0.5700000000000001,
+          "risk_reduction": 0.5488250672818147,
+          "threshold": 5.7688007164001505
+        },
+        {
+          "abstention_rate": 0.6174574309803273,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.38254256901967265,
+          "false_assertion_rate": 0.20267934312878133,
+          "n_asserted": 2314,
+          "quantile": 0.6175,
+          "risk_reduction": 0.5913308844713339,
+          "threshold": 7.442222614288331
+        },
+        {
+          "abstention_rate": 0.6649032897999669,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.33509671020003307,
+          "false_assertion_rate": 0.18105574740996547,
+          "n_asserted": 2027,
+          "quantile": 0.665,
+          "risk_reduction": 0.6349312613057062,
+          "threshold": 9.17892951965332
+        },
+        {
+          "abstention_rate": 0.7125144652008597,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.28748553479914035,
+          "false_assertion_rate": 0.16848763657274296,
+          "n_asserted": 1739,
+          "quantile": 0.7125,
+          "risk_reduction": 0.6602727621238259,
+          "threshold": 11.015522003173828
+        },
+        {
+          "abstention_rate": 0.7599603240204993,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.24003967597950074,
+          "false_assertion_rate": 0.15082644628099173,
+          "n_asserted": 1452,
+          "quantile": 0.76,
+          "risk_reduction": 0.695883608815427,
+          "threshold": 13.034160537719728
+        },
+        {
+          "abstention_rate": 0.8074061828401389,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.19259381715986112,
+          "false_assertion_rate": 0.12360515021459227,
+          "n_asserted": 1165,
+          "quantile": 0.8075,
+          "risk_reduction": 0.7507708154506437,
+          "threshold": 15.091381912231446
+        },
+        {
+          "abstention_rate": 0.8550173582410316,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.1449826417589684,
+          "false_assertion_rate": 0.11402508551881414,
+          "n_asserted": 877,
+          "quantile": 0.855,
+          "risk_reduction": 0.7700874192322311,
+          "threshold": 17.731930541992188
+        },
+        {
+          "abstention_rate": 0.9024632170606712,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.09753678293932881,
+          "false_assertion_rate": 0.10338983050847457,
+          "n_asserted": 590,
+          "quantile": 0.9025,
+          "risk_reduction": 0.7915316384180792,
+          "threshold": 20.87842254638672
+        },
+        {
+          "abstention_rate": 0.9499090758803108,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.050090924119689205,
+          "false_assertion_rate": 0.0858085808580858,
+          "n_asserted": 303,
+          "quantile": 0.95,
+          "risk_reduction": 0.826981298129813,
+          "threshold": 25.169380569457996
+        }
+      ],
+      "n": 6049,
+      "operating_points": {
+        "coverage_50": {
+          "abstention_rate": 0.5225657133410482,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.4774342866589519,
+          "false_assertion_rate": 0.24376731301939059,
+          "n_asserted": 2888,
+          "quantile": 0.5225,
+          "risk_reduction": 0.5084838411819022,
+          "threshold": 3.983567361831665
+        },
+        "coverage_70": {
+          "abstention_rate": 0.2850057860803439,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.7149942139196561,
+          "false_assertion_rate": 0.3574566473988439,
+          "n_asserted": 4325,
+          "quantile": 0.28500000000000003,
+          "risk_reduction": 0.2792482466281311,
+          "threshold": -6.535090293884276
+        },
+        "coverage_90": {
+          "abstention_rate": 0.09505703422053235,
+          "baseline_false_rate": 0.49594974375929907,
+          "coverage": 0.9049429657794676,
+          "false_assertion_rate": 0.46236755571793936,
+          "n_asserted": 5474,
+          "quantile": 0.095,
+          "risk_reduction": 0.06771288515406163,
+          "threshold": -21.849419326782225
+        }
+      }
+    }
+  },
+  "seeds": {
+    "PYTHONHASHSEED": "1729",
+    "cuda_device_count": 1,
+    "cudnn_deterministic": true,
+    "deterministic_algorithms": "on (warn_only)",
+    "master_seed": 1729,
+    "numpy": 1729,
+    "python_random": 1729,
+    "torch_cpu": 1729,
+    "torch_cuda": 1729
+  },
+  "split_scheme": "leave_one_topic_out",
+  "timestamp_utc": "2026-09-02T18:26:36Z",
+  "versions": {
+    "accelerate": "1.14.0",
+    "bitsandbytes": "0.50.2",
+    "datasets": "5.0.1",
+    "numpy": "2.1.3",
+    "platform": "Linux-6.6.122+-x86_64-with-glibc2.35",
+    "python": "3.13.15",
+    "sklearn": "1.6.1",
+    "torch": "2.11.0+cu128",
+    "transformers": "5.16.1"
+  }
+}

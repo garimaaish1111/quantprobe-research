@@ -1,0 +1,432 @@
+{
+  "datasets": {
+    "halueval_qa": {
+      "n": 1000,
+      "n_false": 500,
+      "n_topics": 1,
+      "n_true": 500,
+      "per_topic": {
+        "halueval_qa": {
+          "false": 500,
+          "n": 1000,
+          "true": 500
+        }
+      },
+      "positive_rate": 0.5,
+      "sources": [
+        "halueval_qa"
+      ],
+      "topics": [
+        "halueval_qa"
+      ]
+    },
+    "true_false": {
+      "n": 6049,
+      "n_false": 3000,
+      "n_topics": 6,
+      "n_true": 3049,
+      "per_topic": {
+        "animals": {
+          "false": 504,
+          "n": 1008,
+          "true": 504
+        },
+        "cities": {
+          "false": 712,
+          "n": 1424,
+          "true": 712
+        },
+        "companies": {
+          "false": 600,
+          "n": 1200,
+          "true": 600
+        },
+        "elements": {
+          "false": 465,
+          "n": 930,
+          "true": 465
+        },
+        "facts": {
+          "false": 307,
+          "n": 611,
+          "true": 304
+        },
+        "inventions": {
+          "false": 412,
+          "n": 876,
+          "true": 464
+        }
+      },
+      "positive_rate": 0.5041,
+      "sources": [
+        "true_false"
+      ],
+      "topics": [
+        "animals",
+        "cities",
+        "companies",
+        "elements",
+        "facts",
+        "inventions"
+      ]
+    },
+    "truthfulqa_mc1": {
+      "n": 4114,
+      "n_false": 3297,
+      "n_topics": 39,
+      "n_true": 817,
+      "per_topic": {
+        "advertising": {
+          "false": 50,
+          "n": 63,
+          "true": 13
+        },
+        "confusion_other": {
+          "false": 41,
+          "n": 49,
+          "true": 8
+        },
+        "confusion_people": {
+          "false": 78,
+          "n": 101,
+          "true": 23
+        },
+        "confusion_places": {
+          "false": 104,
+          "n": 119,
+          "true": 15
+        },
+        "conspiracies": {
+          "false": 129,
+          "n": 154,
+          "true": 25
+        },
+        "distraction": {
+          "false": 69,
+          "n": 83,
+          "true": 14
+        },
+        "economics": {
+          "false": 146,
+          "n": 177,
+          "true": 31
+        },
+        "education": {
+          "false": 32,
+          "n": 42,
+          "true": 10
+        },
+        "fiction": {
+          "false": 115,
+          "n": 145,
+          "true": 30
+        },
+        "finance": {
+          "false": 58,
+          "n": 67,
+          "true": 9
+        },
+        "health": {
+          "false": 219,
+          "n": 274,
+          "true": 55
+        },
+        "history": {
+          "false": 60,
+          "n": 84,
+          "true": 24
+        },
+        "indexical_error_identity": {
+          "false": 38,
+          "n": 47,
+          "true": 9
+        },
+        "indexical_error_location": {
+          "false": 39,
+          "n": 50,
+          "true": 11
+        },
+        "indexical_error_other": {
+          "false": 84,
+          "n": 105,
+          "true": 21
+        },
+        "indexical_error_time": {
+          "false": 69,
+          "n": 85,
+          "true": 16
+        },
+        "language": {
+          "false": 68,
+          "n": 89,
+          "true": 21
+        },
+        "law": {
+          "false": 310,
+          "n": 374,
+          "true": 64
+        },
+        "logical_falsehood": {
+          "false": 29,
+          "n": 43,
+          "true": 14
+        },
+        "mandela_effect": {
+          "false": 11,
+          "n": 17,
+          "true": 6
+        },
+        "misconceptions": {
+          "false": 313,
+          "n": 413,
+          "true": 100
+        },
+        "misconceptions_topical": {
+          "false": 13,
+          "n": 17,
+          "true": 4
+        },
+        "misinformation": {
+          "false": 58,
+          "n": 70,
+          "true": 12
+        },
+        "misquotations": {
+          "false": 31,
+          "n": 47,
+          "true": 16
+        },
+        "myths_and_fairytales": {
+          "false": 66,
+          "n": 87,
+          "true": 21
+        },
+        "nutrition": {
+          "false": 59,
+          "n": 75,
+          "true": 16
+        },
+        "paranormal": {
+          "false": 125,
+          "n": 150,
+          "true": 25
+        },
+        "politics": {
+          "false": 47,
+          "n": 57,
+          "true": 10
+        },
+        "proverbs": {
+          "false": 50,
+          "n": 68,
+          "true": 18
+        },
+        "psychology": {
+          "false": 80,
+          "n": 99,
+          "true": 19
+        },
+        "religion": {
+          "false": 46,
+          "n": 61,
+          "true": 15
+        },
+        "science": {
+          "false": 57,
+          "n": 66,
+          "true": 9
+        },
+        "sociology": {
+          "false": 258,
+          "n": 313,
+          "true": 55
+        },
+        "statistics": {
+          "false": 16,
+          "n": 21,
+          "true": 5
+        },
+        "stereotypes": {
+          "false": 96,
+          "n": 120,
+          "true": 24
+        },
+        "subjective": {
+          "false": 49,
+          "n": 58,
+          "true": 9
+        },
+        "superstitions": {
+          "false": 93,
+          "n": 115,
+          "true": 22
+        },
+        "uncategorized": {
+          "false": 3,
+          "n": 4,
+          "true": 1
+        },
+        "weather": {
+          "false": 88,
+          "n": 105,
+          "true": 17
+        }
+      },
+      "positive_rate": 0.1986,
+      "sources": [
+        "truthfulqa_mc1"
+      ],
+      "topics": [
+        "advertising",
+        "confusion_other",
+        "confusion_people",
+        "confusion_places",
+        "conspiracies",
+        "distraction",
+        "economics",
+        "education",
+        "fiction",
+        "finance",
+        "health",
+        "history",
+        "indexical_error_identity",
+        "indexical_error_location",
+        "indexical_error_other",
+        "indexical_error_time",
+        "language",
+        "law",
+        "logical_falsehood",
+        "mandela_effect",
+        "misconceptions",
+        "misconceptions_topical",
+        "misinformation",
+        "misquotations",
+        "myths_and_fairytales",
+        "nutrition",
+        "paranormal",
+        "politics",
+        "proverbs",
+        "psychology",
+        "religion",
+        "science",
+        "sociology",
+        "statistics",
+        "stereotypes",
+        "subjective",
+        "superstitions",
+        "uncategorized",
+        "weather"
+      ]
+    }
+  },
+  "folds_group_kfold": [
+    {
+      "held_out": "cities",
+      "n_test": 1424,
+      "n_train": 4625,
+      "test_positive_rate": 0.5,
+      "train_positive_rate": 0.5053
+    },
+    {
+      "held_out": "companies",
+      "n_test": 1200,
+      "n_train": 4849,
+      "test_positive_rate": 0.5,
+      "train_positive_rate": 0.5051
+    },
+    {
+      "held_out": "animals",
+      "n_test": 1008,
+      "n_train": 5041,
+      "test_positive_rate": 0.5,
+      "train_positive_rate": 0.5049
+    },
+    {
+      "held_out": "elements",
+      "n_test": 930,
+      "n_train": 5119,
+      "test_positive_rate": 0.5,
+      "train_positive_rate": 0.5048
+    },
+    {
+      "held_out": "facts+inventions",
+      "n_test": 1487,
+      "n_train": 4562,
+      "test_positive_rate": 0.5165,
+      "train_positive_rate": 0.5
+    }
+  ],
+  "folds_leave_one_topic_out": [
+    {
+      "held_out": "animals",
+      "n_test": 1008,
+      "n_train": 5041,
+      "test_positive_rate": 0.5,
+      "train_positive_rate": 0.5049
+    },
+    {
+      "held_out": "cities",
+      "n_test": 1424,
+      "n_train": 4625,
+      "test_positive_rate": 0.5,
+      "train_positive_rate": 0.5053
+    },
+    {
+      "held_out": "companies",
+      "n_test": 1200,
+      "n_train": 4849,
+      "test_positive_rate": 0.5,
+      "train_positive_rate": 0.5051
+    },
+    {
+      "held_out": "elements",
+      "n_test": 930,
+      "n_train": 5119,
+      "test_positive_rate": 0.5,
+      "train_positive_rate": 0.5048
+    },
+    {
+      "held_out": "facts",
+      "n_test": 611,
+      "n_train": 5438,
+      "test_positive_rate": 0.4975,
+      "train_positive_rate": 0.5048
+    },
+    {
+      "held_out": "inventions",
+      "n_test": 876,
+      "n_train": 5173,
+      "test_positive_rate": 0.5297,
+      "train_positive_rate": 0.4997
+    }
+  ],
+  "git_commit": "851519c",
+  "git_dirty": true,
+  "hardware": {
+    "cpu": "AMD64 Family 23 Model 104 Stepping 1, AuthenticAMD",
+    "cuda_available": false
+  },
+  "phase": "1-data",
+  "seeds": {
+    "PYTHONHASHSEED": "1729",
+    "cudnn_deterministic": true,
+    "deterministic_algorithms": "on (warn_only)",
+    "master_seed": 1729,
+    "numpy": 1729,
+    "python_random": 1729,
+    "torch_cpu": 1729,
+    "torch_cuda": "no cuda"
+  },
+  "timestamp_utc": "2026-09-02T07:47:27Z",
+  "versions": {
+    "accelerate": "1.14.0",
+    "bitsandbytes": "not importable: ModuleNotFoundError",
+    "datasets": "5.0.1",
+    "numpy": "2.5.2",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.0",
+    "sklearn": "1.9.0",
+    "torch": "2.13.0+cpu",
+    "transformers": "5.16.1"
+  }
+}

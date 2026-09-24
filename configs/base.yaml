@@ -1,0 +1,85 @@
+# QuantProbe - settings shared by EVERY run.
+#
+# Anything in here must be identical across precisions and across models, or
+# the comparison is not a comparison. Model configs `extends: base.yaml` and
+# override only what genuinely differs.
+
+project: quantprobe
+
+# Master seed. One number, threaded into Python/NumPy/torch/sklearn.
+# 1729 for no reason beyond it being memorable and fixed.
+seed: 1729
+
+paths:
+  # ${VAR:-default} - resolves from the environment, falls back to a
+  # repo-relative path so a fresh clone runs with no setup.
+  cache_root: "${QUANTPROBE_CACHE:-cache}"
+  results_root: results
+  logs_root: logs
+
+# The three arms of the study.
+precisions:
+  - fp16
+  - int8
+  - int4
+
+# bitsandbytes settings, per arm.
+#
+# CRITICAL: these quantize the *weights*. The compute dtype and therefore
+# every hidden state we extract stays FP16. See src/models/loader.py.
+quantization:
+  fp16:
+    # Not a bnb config - just the load dtype.
+    torch_dtype: float16
+  int8:
+    load_in_8bit: true
+    # Outlier threshold for LLM.int8(). 6.0 is the paper's value and the
+    # bitsandbytes default; stated explicitly so the answer is not
+    # "whatever the library did".
+    llm_int8_threshold: 6.0
+    llm_int8_has_fp16_weight: false
+  int4:
+    load_in_4bit: true
+    # nf4 = NormalFloat4, the information-theoretically motivated 4-bit type
+    # from QLoRA. The alternative, fp4, is a plain float grid and is known to
+    # be slightly worse; nf4 is what people actually deploy, so it is the
+    # honest thing to measure.
+    bnb_4bit_quant_type: nf4
+    # Double quantization saves ~0.4 bits/param by quantizing the quantization
+    # constants. ON, because it is the default people deploy with.
+    bnb_4bit_use_double_quant: true
+    # The dtype activations are computed in. NOT 4-bit. This is the line that
+    # keeps extracted activations FP16.
+    bnb_4bit_compute_dtype: float16
+
+extract:
+  batch_size: 16
+  # Statements are short declaratives; 128 is generous. Asserted at runtime -
+  # if anything truncates, we fail loudly rather than silently probing a
+  # cut-off sentence.
+  max_length: 128
+  # Which token's residual stream we read. "last" = final token of the
+  # statement, the standard choice in the probing literature because it is
+  # the position where the model has seen the whole claim.
+  token_position: last
+  # Every layer including the embedding output, so index 0 = embeddings.
+  layers: all
+  # Hidden states arrive as fp16; we upcast on save. fp32 costs 2x disk but
+  # removes any doubt that a probe difference came from storage rounding.
+  save_dtype: float32
+  # Refuse to start if the volume holding cache_root has less than this free.
+  min_free_gb: 5.0
+
+probe:
+  type: logistic
+  C: 1.0
+  max_iter: 2000
+  standardize: true
+  cv_folds: 5
+  # Split by topic, never randomly. Random splits leak near-
+  # duplicate statements and inflate AUROC.
+  group_by: topic
+  random_state: 1729
+
+logging:
+  level: INFO

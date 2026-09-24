@@ -1,0 +1,29 @@
+# E1 - per-layer probe AUROC, one curve per precision. The headline figure.
+#
+# This config does not load a model. It reads the cached arrays produced by
+# scripts/01_extract.py and fits probes over them. Everything in this
+# stage reads from cached arrays; no model is loaded.
+
+extends: base.yaml
+
+experiment:
+  id: E1
+  name: per_layer_auroc_by_precision
+  description: >
+    Fit one logistic-regression probe per (precision, layer) on cached
+    last-token hidden states, and plot AUROC against layer index with one
+    curve per precision. Bands are mean +/- std over topic-grouped CV folds.
+
+  # Which cached extraction to read. Must match a directory produced by
+  # 01_extract.py: <cache_root>/<model_short_name>/<precision>/
+  model_short_name: llama32-1b
+  precisions: [fp16, int8, int4]
+
+  # Second, simpler estimator. If logistic regression and
+  # mass-mean disagree strongly that is itself a finding, so both are always
+  # fitted rather than one being a fallback.
+  also_fit_mass_mean: true
+
+  outputs:
+    metrics: results/metrics/e1_per_layer_auroc.json
+    figure: results/figures/e1_per_layer_auroc.png

@@ -1,0 +1,53 @@
+# QuantProbe pinned dependencies.
+#
+# Versions below are the ones actually installed and verified on the dev
+# laptop (Windows 11, Python 3.14.0, CPU-only) as of 2026-09-02, taken from
+# `pip freeze` rather than written from memory.
+#
+# ---------------------------------------------------------------------------
+# READ THIS BEFORE RUNNING ON COLAB
+# ---------------------------------------------------------------------------
+# Colab ships Python 3.12, not 3.14, and ships its own CUDA build of torch.
+# Do NOT `pip install -r requirements.txt` wholesale there - it will drag in a
+# CPU torch wheel and break the GPU. On Colab:
+#
+#   pip install -q -U transformers==5.16.1 datasets==5.0.1 \
+#                     accelerate==1.14.0 bitsandbytes==0.50.2
+#
+# and leave Colab's preinstalled torch alone.
+# ---------------------------------------------------------------------------
+
+# --- Core modelling ---
+# torch is intentionally listed but platform-dependent: the pin below is the
+# CPU build used locally. On CUDA machines install the matching CUDA build
+# from https://pytorch.org rather than this pin.
+torch==2.13.0
+transformers==5.16.1
+tokenizers==0.23.1
+safetensors==0.8.0
+accelerate==1.14.0
+huggingface-hub>=1.0
+
+# --- Quantization: see requirements-cuda.txt ---
+# bitsandbytes is deliberately NOT in this file. It needs CUDA, and this
+# laptop has an AMD integrated GPU, so installing it here would put a
+# package in the venv that raises on import and poisons unrelated scripts.
+# It is imported lazily in src/models/loader.py. Install it only where a
+# GPU exists: pip install -r requirements-cuda.txt
+
+# --- Data ---
+datasets==5.0.1
+pandas==3.0.5
+numpy==2.5.2
+
+# --- Probing / stats ---
+scikit-learn==1.9.0
+scipy==1.18.1
+
+# --- Config, plotting, CLI ---
+PyYAML==6.0.3
+matplotlib==3.11.1
+tqdm==4.70.0
+
+# --- Tests ---
+pytest==9.1.1

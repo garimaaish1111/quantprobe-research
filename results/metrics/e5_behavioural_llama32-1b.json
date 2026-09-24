@@ -1,0 +1,73 @@
+{
+  "experiment": "E5",
+  "halueval_vs_fp16": {
+    "int4": {
+      "delta": 0.0234,
+      "p": 0.188
+    },
+    "int8": {
+      "delta": -0.0026,
+      "p": 0.884
+    }
+  },
+  "mc1_length_confound": {
+    "accuracy_if_always_longest": 0.4076,
+    "accuracy_if_always_shortest": 0.2938,
+    "verdict": "MC1 uninformative at 1B - a length heuristic beats every arm"
+  },
+  "model_short_name": "llama32-1b",
+  "note": "two-proportion tests; arms judged the SAME pairs so a paired McNemar test would be more powerful - per-item verdicts are not stored yet",
+  "phase": "5-behavioural",
+  "results": {
+    "fp16": {
+      "halueval_qa": {
+        "accuracy": 0.6013,
+        "accuracy_ci": [
+          0.5763,
+          0.6258
+        ],
+        "n_pairs": 1500
+      },
+      "truthfulqa_mc1": {
+        "accuracy_logprob_mean": 0.2913,
+        "accuracy_logprob_sum": 0.2546,
+        "chance": 0.226,
+        "n_questions": 817
+      }
+    },
+    "int4": {
+      "halueval_qa": {
+        "accuracy": 0.6247,
+        "accuracy_ci": [
+          0.5999,
+          0.6488
+        ],
+        "n_pairs": 1500
+      },
+      "truthfulqa_mc1": {
+        "accuracy_logprob_mean": 0.2778,
+        "accuracy_logprob_sum": 0.2399,
+        "chance": 0.226,
+        "n_questions": 817
+      }
+    },
+    "int8": {
+      "halueval_qa": {
+        "accuracy": 0.5987,
+        "accuracy_ci": [
+          0.5736,
+          0.6232
+        ],
+        "n_pairs": 1500
+      },
+      "truthfulqa_mc1": {
+        "accuracy_logprob_mean": 0.2999,
+        "accuracy_logprob_sum": 0.257,
+        "chance": 0.226,
+        "n_questions": 817
+      }
+    }
+  },
+  "scoring": "likelihood (MC1) + yes/no judgement (HaluEval); closed-book",
+  "source": "Colab T4 run 2026-09-02 16:15-16:20 UTC; transcribed from the run log"
+}

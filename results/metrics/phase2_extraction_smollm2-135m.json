@@ -1,0 +1,32 @@
+{
+  "git_commit": "d19d1a1",
+  "git_dirty": true,
+  "hardware": {
+    "cpu": "AMD64 Family 23 Model 104 Stepping 1, AuthenticAMD",
+    "cuda_available": false
+  },
+  "phase": "2-extraction",
+  "timestamp_utc": "2026-09-02T08:31:59Z",
+  "token_alignment": {
+    "precisions": [
+      "fp16"
+    ],
+    "shared_fingerprint": "5828d5816ed0d58877c94ea8b1a25637a534a115a5e53d6300b5cc86f8a233fe",
+    "shared_settings": {
+      "batch_size": 4,
+      "n_examples": 10,
+      "token_position": "last"
+    }
+  },
+  "versions": {
+    "accelerate": "1.14.0",
+    "bitsandbytes": "not importable: ModuleNotFoundError",
+    "datasets": "5.0.1",
+    "numpy": "2.5.2",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.0",
+    "sklearn": "1.9.0",
+    "torch": "2.13.0+cpu",
+    "transformers": "5.16.1"
+  }
+}

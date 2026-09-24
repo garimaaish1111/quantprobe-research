@@ -1,0 +1,35 @@
+# Qwen2.5-1.5B-Instruct.
+#
+# Two jobs.
+#
+# 1. UNGATED DRY RUN. Llama-3.2 access can take hours to approve, and the
+#    risky parts of a Colab run are not model-specific: does bitsandbytes
+#    install on Colab's CUDA, do INT8/INT4 actually produce uint8 weights on
+#    a T4, does a 1B-class model at three precisions fit in 15 GB, does
+#    resume survive a real disconnect. All of that can be retired on this
+#    model while the Llama gate is pending. No token needed.
+#
+# 2. PHASE 6 SECOND MODEL. It is a genuinely different family from Llama -
+#    different tokenizer, different pretraining mix, different depth/width
+#    tradeoff (28 x 1536 against Llama's 16 x 2048). If the quantization
+#    result reproduces here it is a fact about quantization; if it only holds
+#    on Llama it is a fact about Llama.
+#
+# Architecture verified against the live config on 2026-09-02, not assumed.
+# Ships as BF16, same as Llama-3.2, so the FP16 arm is itself a cast from
+# the released weights.
+
+extends: base.yaml
+
+model:
+  hf_id: Qwen/Qwen2.5-1.5B-Instruct
+  short_name: qwen25-1.5b
+  gated: false
+  trust_remote_code: false
+  expected_n_layers: 28
+  expected_hidden_states: 29
+  expected_d_model: 1536
+
+extract:
+  # 1.00 GB per precision at N=6049, 3.00 GB for all three.
+  batch_size: 16

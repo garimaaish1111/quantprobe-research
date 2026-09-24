@@ -1,0 +1,32 @@
+# Smoke-test model: SmolLM2-135M.
+#
+# NOT a research model. Its only job is to exercise the code path - load,
+# tokenize, forward with output_hidden_states, slice the last token, assert
+# shapes - on a CPU-only laptop in seconds.
+#
+# Why not the real 1B model locally: this machine has an AMD integrated GPU,
+# so there is no CUDA and therefore no bitsandbytes. The INT8/INT4 arms
+# cannot run here at all, and a 1B fp32 forward pass on CPU is slow enough to
+# make the smoke test useless as a fast check. The real smoke run happens on
+# Colab against model_llama1b.yaml.
+
+extends: base.yaml
+
+model:
+  hf_id: HuggingFaceTB/SmolLM2-135M
+  short_name: smollm2-135m
+  gated: false
+  trust_remote_code: false
+  expected_n_layers: 30
+  expected_hidden_states: 31
+  expected_d_model: 576
+
+# CPU-only: bitsandbytes needs CUDA, so this arm list is fp16 only. The
+# loader downgrades fp16 -> fp32 on CPU (fp16 matmul on CPU is either
+# unsupported or pathologically slow) and says so loudly.
+precisions:
+  - fp16
+
+extract:
+  batch_size: 4
+  max_length: 64
